@@ -14,6 +14,7 @@ describe('Casos de Prueba del Home Page', () => {
         HomePageActions.seleccionarProducto()
         HomePageActions.agregarAlCarrito()
         HomePageActions.verificarMensajeExito('Success: You have added iPhone to your shopping cart!')
+        HomePageActions.visualizarPreviaCarrito()
         HomePageActions.removerProducto()
     });
     
