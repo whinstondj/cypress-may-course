@@ -1,6 +1,6 @@
 class HomePageActions {
     static removerProducto() {
-        cy.log('Aca hacemos las acciones para remover un producto')
+        cy.get('form > .btn').click()
     }
     static clickearCarrusel() {
         cy.log('Aca hacemos las acciones para agregar un producto al carrito')
@@ -12,6 +12,7 @@ class HomePageActions {
     }
     static agregarAlCarrito() {
         cy.get('#button-cart').click()
+        cy.get('#alert > div > button').click()
     }
     static verificarMensajeExito(mensaje) {
         cy.get('#alert').should('be.visible')
@@ -32,6 +33,10 @@ class HomePageActions {
     static scrollearHaciaAbajo() {
         cy.log('Aca scrolleamos hacia abajo')
         
+    }
+
+    static visualizarPreviaCarrito (){
+        cy.get('.dropdown > .btn').click({force:true})
     }
 }
 
